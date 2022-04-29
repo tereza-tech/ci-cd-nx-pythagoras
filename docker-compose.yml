@@ -1,0 +1,23 @@
+version: '3'
+
+services:
+  # React App
+  client:
+    extends:
+      file: docker-compose.base.yml
+      service: nx-app-base
+    command: npm run client:dev:docker
+    ports:
+      - 4201:4200
+
+  # Express App
+  server:
+    extends:
+      file: docker-compose.base.yml
+      service: nx-app-base
+    command: npm run server:dev:docker
+    ports:
+      - 3333:3333 # API Entry port
+
+volumes:
+  mono-node-modules: null
