@@ -14,7 +14,8 @@
     "serve:all": "npx nx run-many --target=serve --all=true  --watch",
     "build:all": "npx nx run-many --target=build --all=true  --watch"
   },
-  "private": true,
+  "private": false,
+"publishConfig":{"registry":"https://spacete.jfrog.io/artifactory/api/npm/default-npm-virtual/"},
   "dependencies": {
     "core-js": "https://nexus.dq.vwgroup.com/repository/npm-public/core-js/-/core-js-3.6.5.tgz",
     "express": "https://nexus.dq.vwgroup.com/repository/npm-public/express/-/express-4.17.1.tgz",
